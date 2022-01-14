@@ -183,8 +183,7 @@ class Scanner():
         self.handle = get_handle(self.pid)
 
     def convert_array_to_text(self, array):  # b"\xB1\x00" -> "B1 00"
-        array = str(array).replace("\\x", " ").replace("b'", "").replace("'", "").replace(" ", "", 1).replace("<",
-                                                                                                              "", ).upper()
+        array = str(array).replace("\\x", " ").replace("b'", "").replace("'", "").replace(" ", "", 1).replace("<", "", ).upper()
         return array
 
     def convert_text_to_array(self, text):  # "B1 00" -> b"\xB1\x00"
